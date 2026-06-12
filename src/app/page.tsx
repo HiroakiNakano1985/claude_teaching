@@ -67,9 +67,9 @@ export default function Home() {
           <div className="flex flex-col items-center gap-3 rounded-2xl border border-brand/30 bg-brand-soft px-5 py-7 text-center">
             <Seal char="皆伝" />
             <div>
-              <p className="font-brush text-2xl text-brand-ink">Phase 0 修了</p>
+              <p className="font-brush text-2xl text-brand-ink">ここまで修了</p>
               <p className="mt-1.5 text-sm leading-7 text-ink-700">
-                週1〜4の稽古、見事に納めました。続き(週5〜12)は本開発でお届けします。
+                公開中の稽古を、見事にすべて納めました。続きの週は順次お届けします。
               </p>
             </div>
           </div>
@@ -95,7 +95,7 @@ export default function Home() {
 
       {/* 品書き(カリキュラム) */}
       <section>
-        <h2 className="section-label mb-2.5">品書き(フェーズ1:型を入れる)</h2>
+        <h2 className="section-label mb-2.5">品書き(カリキュラム)</h2>
         <div className="space-y-3">
           {CURRICULUM.map((w) => (
             <div key={w.week} className="card p-4">

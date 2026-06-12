@@ -177,7 +177,7 @@ export function ExerciseRunner({
               <h3 className="text-xs font-bold tracking-wide text-ink-500">{outputLabel}</h3>
               {outputDone && <CopyBtn text={output} />}
             </div>
-            <div className="whitespace-pre-wrap text-[15px] leading-8 text-ink-700">
+            <div className="whitespace-pre-wrap break-words [overflow-wrap:anywhere] text-[15px] leading-8 text-ink-700">
               {output}
               {!outputDone && <span className="ml-0.5 inline-block w-2 animate-pulse text-brand">▍</span>}
             </div>
@@ -353,7 +353,7 @@ function GivenBlock({
         <p className={`text-xs font-bold tracking-wide ${tone === "warn" ? "text-warnink" : "text-ink-500"}`}>{label}</p>
         {copy && <CopyBtn text={body} />}
       </div>
-      <div className="whitespace-pre-wrap text-sm leading-7 text-ink-700">{body}</div>
+      <div className="whitespace-pre-wrap break-words [overflow-wrap:anywhere] text-sm leading-7 text-ink-700">{body}</div>
     </div>
   );
 }

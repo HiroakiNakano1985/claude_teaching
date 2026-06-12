@@ -20,7 +20,7 @@ function renderInline(text: string, keyBase: string): React.ReactNode[] {
 export function Markdown({ text, className = "" }: { text: string; className?: string }) {
   const blocks = text.split(/\n\n+/);
   return (
-    <div className={`space-y-3 text-[15px] leading-8 text-ink-700 ${className}`}>
+    <div className={`space-y-3 break-words [overflow-wrap:anywhere] text-[15px] leading-8 text-ink-700 ${className}`}>
       {blocks.map((block, bi) => {
         const lines = block.split("\n");
         const isBullet = lines.every((l) => l.trim().startsWith("- "));
