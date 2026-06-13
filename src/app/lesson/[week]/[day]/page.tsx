@@ -8,6 +8,7 @@ import { ExerciseRunner } from "@/components/ExerciseRunner";
 import { DrillCard } from "@/components/DrillRunner";
 import { Quiz } from "@/components/Quiz";
 import { Seal } from "@/components/Dojo";
+import { FeedbackLink } from "@/components/FeedbackLink";
 import { complete, stepAfterKey } from "@/lib/progress";
 
 const KANJI = ["一", "二", "三", "四", "五", "六", "七", "八", "九"];
@@ -127,6 +128,9 @@ export default function LessonPage({ params }: { params: { week: string; day: st
           <Link href={nextHref ?? "/"} className="btn-primary flex-1">
             {nextHref ? "次のレッスンへ →" : "トップへ →"}
           </Link>
+        </div>
+        <div className="pt-1 text-center">
+          <FeedbackLink context={`週${week} Day${day}`} className="text-xs" />
         </div>
       </article>
     );

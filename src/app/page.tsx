@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { CURRICULUM } from "@/lib/curriculum";
 import { Daruma, Seal } from "@/components/Dojo";
+import { FeedbackLink } from "@/components/FeedbackLink";
 import { loadProgress, nextStep, progressPct, resetProgress, allSteps, type Progress, type Step } from "@/lib/progress";
 
 // 進捗に応じた段位(白帯→黒帯)
@@ -151,6 +152,11 @@ export default function Home() {
           学習の進捗はこの端末にのみ保存されます(ログイン不要)。ミニ演習と週末課題のAI実行・添削には、
           管理者によるAPIキーの設定が必要です。
         </p>
+        <div className="mt-3 rounded-xl bg-brand-tint p-3">
+          <p className="text-[13px] font-semibold text-brand-ink">β版です。気づいた点を教えてください 🙏</p>
+          <p className="mt-0.5 text-[11px] text-ink-500">使いにくい所・分かりにくい問題・要望など、ひとことでも大歓迎です。</p>
+          <FeedbackLink context="ホーム" variant="button" className="mt-2" />
+        </div>
         <button
           type="button"
           onClick={() => {
